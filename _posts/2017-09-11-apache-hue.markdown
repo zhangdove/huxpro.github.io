@@ -12,7 +12,7 @@ tags:
 ---
 
 
-< 前言:使用如下命令安装
+< aaaaaaaaa:使用如下命令安装
 < sudo yum install gcc
 < sudo yum install gcc-c++
 < sudo yum install libxml2-devel
@@ -82,3 +82,4 @@ build/env/bin/hue runserver 0.0.0.0:8000
 < [[database]]
 < engine=sqlite3
 < name=desktop/desktop.db
+
