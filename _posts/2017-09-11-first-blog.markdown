@@ -18,9 +18,8 @@ tags:
 	>  用'>'表示，然后写入文本，相当于前言
 	
 ## 2.超链接的两种方式
-	a)文本中使用 [百度](www.baidu.com) 这样的形式做超链接
-		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
-		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
+	a)文本中使用 [百度](https://zhuanlan.zhihu.com/p/25167289) 这样的形式做超链接
+		[下一代 Web 应用模型](https://zhuanlan.zhihu.com/p/25167289)
 	b)文本中使用: [百度][1]
 	  文末使用  : `[2]: https://www.baidu.com`
 
