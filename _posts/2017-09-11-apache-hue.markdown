@@ -10,6 +10,7 @@ catalog:    true
 tags:
     - hue
 ---
+
 < 前言:使用如下命令安装
 < sudo yum install gcc
 < sudo yum install gcc-c++
@@ -61,6 +62,7 @@ make apps
 build/env/bin/hue runserver 0.0.0.0:8000
 
 # hue.ini 配置如下  (这里只配置了hive的)
+
 < http_host=192.168.139.128
 < http_port=8888
 < secret_key=adfhaoweasdnf2387erlnad9283=-=-123n2-34nd
