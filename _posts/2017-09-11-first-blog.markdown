@@ -20,8 +20,10 @@ tags:
 ## 2.超链接的两种方式
 	a)文本中使用 [百度](https://zhuanlan.zhihu.com/p/25167289) 这样的形式做超链接
 		[下一代 Web 应用模型](https://zhuanlan.zhihu.com/p/25167289)
-	b)文本中使用: [百度][1]
+	b)文本中使用: [baidu2][1]
 	  文末使用  : `[2]: https://www.baidu.com`
+	  
+[百度](https://zhuanlan.zhihu.com/p/25167289) 
 
 	  
 ## 3.目录
