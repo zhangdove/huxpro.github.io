@@ -10,22 +10,22 @@ catalog:    true
 tags:
     - hue
 ---
-<前言:使用如下命令安装
-<sudo yum install gcc
-<sudo yum install gcc-c++
-<sudo yum install libxml2-devel
-<sudo yum install libxslt-devel
-<sudo yum install cyrus-sasl-devel
-<sudo yum install cyrus-sasl-gssapi
-<sudo yum install mysql
-<sudo yum install python-devel
-<sudo yum install python-setuptools
-<sudo yum install sqlite-devel
-<sudo yum install ant
-<sudo yum install cyrus-sasl-plain
-<sudo yum install krb5-dev
-<sudo yum install openldap-devel.x86_64
-<sudo yum install gmp-devel.x86_64
+< 前言:使用如下命令安装
+< sudo yum install gcc
+< sudo yum install gcc-c++
+< sudo yum install libxml2-devel
+< sudo yum install libxslt-devel
+< sudo yum install cyrus-sasl-devel
+< sudo yum install cyrus-sasl-gssapi
+< sudo yum install mysql
+< sudo yum install python-devel
+< sudo yum install python-setuptools
+< sudo yum install sqlite-devel
+< sudo yum install ant
+< sudo yum install cyrus-sasl-plain
+< sudo yum install krb5-dev
+< sudo yum install openldap-devel.x86_64
+< sudo yum install gmp-devel.x86_64
 
 
 # 1.配置hdfs-site.xml
@@ -61,20 +61,20 @@ make apps
 build/env/bin/hue runserver 0.0.0.0:8000
 
 # hue.ini 配置如下  (这里只配置了hive的)
-<http_host=192.168.139.128
-<http_port=8888
-<secret_key=adfhaoweasdnf2387erlnad9283=-=-123n2-34nd
-<fs_defaultfs=hdfs://master:8020
-<webhdfs_url=http://master:50070/webhdfs/v1
-<hadoop_conf_dir=/disk/hadoop-2.6.4/etc/hadoop/
-<resourcemanager_host=master
-<resourcemanager_port=8032
-<resourcemanager_api_url=http://Yarn_host_ip:8088
-<submit_to=True
-<hive_server_host=master
-<hive_server_port=10000
-<hive_conf_dir=/usr/hive-1.2.1/conf
-<default_hdfs_superuser=dove
-<[[database]]
-<engine=sqlite3
-<name=desktop/desktop.db
+< http_host=192.168.139.128
+< http_port=8888
+< secret_key=adfhaoweasdnf2387erlnad9283=-=-123n2-34nd
+< fs_defaultfs=hdfs://master:8020
+< webhdfs_url=http://master:50070/webhdfs/v1
+< hadoop_conf_dir=/disk/hadoop-2.6.4/etc/hadoop/
+< resourcemanager_host=master
+< resourcemanager_port=8032
+< resourcemanager_api_url=http://Yarn_host_ip:8088
+< submit_to=True
+< hive_server_host=master
+< hive_server_port=10000
+< hive_conf_dir=/usr/hive-1.2.1/conf
+< default_hdfs_superuser=dove
+< [[database]]
+< engine=sqlite3
+< name=desktop/desktop.db
