@@ -20,20 +20,25 @@ tags:
 ## 2.超链接的两种方式
 	a)文本中使用 [百度](www.baidu.com) 这样的形式做超链接
 		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
+		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
 	b)文本中使用: [百度][2]
 	  文末使用  : `[2]: https://www.baidu.com`
 
+	  
+	  
 ## 3.目录
 	使用 ## 标题一   做目录结构
 	  
 ##4.排版上凸显形式，可能是一种css
 	`<link rel="preload">`  
+
 ---	
+
 ## 5.加粗
 	**加粗文本**
 
 ## 6.文本中使用图片链接
-	![](/img/post-bg-nextgen-web-pwa.jpg)
+![](/img/post-bg-nextgen-web-pwa.jpg)
 	
 ## 7.类似与<hr> 画一淡横线
 
