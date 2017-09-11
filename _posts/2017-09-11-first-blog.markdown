@@ -21,10 +21,9 @@ tags:
 	a)文本中使用 [百度](www.baidu.com) 这样的形式做超链接
 		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
 		[饿了么移动端网站](https://h5.ele.me/msite/#pwa=true)
-	b)文本中使用: [百度][2]
+	b)文本中使用: [百度][1]
 	  文末使用  : `[2]: https://www.baidu.com`
 
-	  
 	  
 ## 3.目录
 	使用 ## 标题一   做目录结构
@@ -46,5 +45,5 @@ tags:
 
 ## 8.斜体字
 	*斜体字文本内容*
-	
-[2]: https://www.baidu.com
+
+[1]: https://www.baidu.com
