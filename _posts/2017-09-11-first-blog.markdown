@@ -21,16 +21,14 @@ tags:
 	a)文本中使用 [百度](https://zhuanlan.zhihu.com/p/25167289) 这样的形式做超链接
 		[下一代 Web 应用模型](https://zhuanlan.zhihu.com/p/25167289)
 	b)文本中使用: [baidu2][1]
-	  文末使用  : `[2]: https://www.baidu.com`
-	  
-[百度](https://zhuanlan.zhihu.com/p/25167289) 
+	  文末使用  : `[2]: https://www.baidu.com` [百度](https://zhuanlan.zhihu.com/p/25167289) 
 
 	  
-## 3.目录
+# 3.目录
 	使用 ## 标题一   做目录结构
 	  
 ##4.排版上凸显形式，可能是一种css
-	`<link rel="preload">`  
+	`<link rel="preload">`  [百度](https://zhuanlan.zhihu.com/p/25167289) 
 
 ---	
 
