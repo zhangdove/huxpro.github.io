@@ -5,25 +5,25 @@ description: "Hey, this is dove."
 header-img: "img/about-bg.jpg"
 ---
 
-<!-- Language Selector -->
+<!-- Language Selector 
 <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
     <option value="0" selected> 中文 Chinese </option>
     <option value="1"> 英文 English </option>
 </select>
-
+-->
 <!-- Chinese Version -->
 <div class="zh post-container">
     {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
     {{ about_zh | markdownify }}
 </div>
 
-<!-- English Version -->
+<!-- English Version
 <div class="en post-container">
     {% capture about_en %}{% include about/en.md %}{% endcapture %}
     {{ about_en | markdownify }}
 </div>
-
-<!-- Handle Language Change -->
+-->
+<!-- Handle Language Change
 <script type="text/javascript">
     // get nodes
     var $zh = document.querySelector(".zh");
@@ -62,7 +62,7 @@ header-img: "img/about-bg.jpg"
     // init
     _render();
 </script>
-
+ -->
 
 {% if site.disqus_username %}
 <!-- disqus 评论框 start -->
