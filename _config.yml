@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: "关于我的描述 | dove:sql(greenplumn,oracle),hadoop,hive,spark | 这里是 dove 的个人博客"
 keyword: "dove, dove的博客, dove Blog, 博客, 个人网站, 互联网, 大数据, hadoop, spark, hive"
-url: "https://huangxuan.me"              # your host, for absolute URL
+#url: "https://huangxuan.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
