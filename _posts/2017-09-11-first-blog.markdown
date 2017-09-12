@@ -18,15 +18,17 @@ tags:
 用'>'表示，然后写入文本，相当于前言
 	
 ## 2.超链接的两种方式
-+ a)文本中使用 [百度](https://zhuanlan.zhihu.com/p/25167289) 这样的形式做超链接[下一代 Web 应用模型](https://zhuanlan.zhihu.com/p/25167289)
-+ b)文本中使用: 
-文末使用  : `[2]: https://www.baidu.com`
+	a)文本中使用 [百度](https://zhuanlan.zhihu.com/p/25167289) 这样的形式做超链接
+		[下一代 Web 应用模型](https://zhuanlan.zhihu.com/p/25167289)
+	b)文本中使用: 
+	  文末使用  : `[2]: https://www.baidu.com` [百度](https://zhuanlan.zhihu.com/p/25167289) 
+
 	  
 # 3.目录
 使用 ## 标题一   做目录结构
 	  
 ## 4.排版上凸显形式，可能是一种css
-`<link rel="preload">`  [百度](https://zhuanlan.zhihu.com/p/25167289) 
+	`<link rel="preload">`  [百度](https://zhuanlan.zhihu.com/p/25167289) 
 
 ---	
 
@@ -41,7 +43,7 @@ tags:
 ---
 
 ## 8.斜体字
-*斜体字文本内容[baidu2][1]*<br>
+*斜体字文本内容[baidu2][1]*
 [baidu2][1]
 
 

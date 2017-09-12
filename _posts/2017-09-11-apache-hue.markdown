@@ -47,7 +47,7 @@ tags:
 		 <value>*</value>
 	</property>
 
-[安装其他参考](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.4/bk_installing_manually_book/content/configure_hdp_hue.html)
+[参考链接](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.3.4/bk_installing_manually_book/content/configure_hdp_hue.html)
 
 
 # 4.配置hive-site.xml
