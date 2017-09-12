@@ -2,7 +2,7 @@
 layout:     post
 title:      "ssh安装"	
 subtitle:   "ssh install"			
-date:       2017-3-22 17:26
+date:       2017-03-22 17:26:00
 author:     "dove"
 header-img: "img/_posts/ssh.jpg"  
 header-mask: 0.3
