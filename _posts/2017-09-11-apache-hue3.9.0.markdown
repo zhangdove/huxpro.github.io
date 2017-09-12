@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "hue安装"	
+title:      "hue3.9.0安装"	
 subtitle:   "apache hue"			
 date:       2017-09-11 12:00:00
 author:     "dove"
