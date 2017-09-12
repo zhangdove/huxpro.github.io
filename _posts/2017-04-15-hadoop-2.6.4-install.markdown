@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "hadoop 2.6.5安装详细步骤"	
+title:      "hadoop 2.6.4安装详细步骤"	
 subtitle:   "apache hadoop"			
 date:       2017-04-15 15:39:00
 author:     "dove"
@@ -8,14 +8,14 @@ header-img: "img/_posts/hadoop-logo.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - install
     - hadoop
+    - install
 ---
 
 
 > 集群之前使用hadoop2.6.4 + sqoop 1.99.4 出现了找不到主机路由，那套集群坏了两天，准备drop掉了，然后重装虚拟机换一套新环境，亲测安装，并顺便记录下来。
 
-**apache hadoop2.6.5安装与配置**
+**apache hadoop2.6.4安装与配置**
 # 1.安装jdk #
 	卸载jdk
 	查看jdk安装包: rpm -qa | grep java
@@ -33,20 +33,20 @@ tags:
 
 
 
-- 1)官网下载 hadoop-2.6.5.tar.gz包 下载地址
+- 1)官网下载 hadoop-2.6.4.tar.gz包 下载地址
 
-    http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/
+    http://archive.apache.org/dist/hadoop/common/hadoop-2.6.4/
 
 
 - 2)将hadoop解压到/usr目录下
 
 
-    sudo tar -zxvf hadoop-2.6.5.tar.gz -C /usr
+    sudo tar -zxvf hadoop-2.6.4.tar.gz -C /usr
 
 - 3)配置环境变量
     sudo nano /etc/profile
     配置环境变量，将hadoop目录指定
-    export HADOOP_HOME=/usr/hadoop-2.6.5
+    export HADOOP_HOME=/usr/hadoop-2.6.4
     export PATH=$PATH:$HADOOP_HOME/bin
     export PATH=$PATH:$HADOOP_HOME/sbin -- 启动集群的start-all.sh命令，将其配置到环境中(个人习惯)
     source /etc/profile
@@ -61,12 +61,12 @@ tags:
     SELINUX=disabled
 
 - 5)创建数据存储目录和临时文件目录
-    mkdir /usr/hadoop-2.6.5/dfs
-    mkdir /usr/hadoop-2.6.5/dfs/data -- datanode必备
-    mkdir /usr/hadoop-2.6.5/dfs/name --  namenode必备
-    mkdir /usr/hadoop-2.6.5/tmp -- 临时文件目录
+    mkdir /usr/hadoop-2.6.4/dfs
+    mkdir /usr/hadoop-2.6.4/dfs/data -- datanode必备
+    mkdir /usr/hadoop-2.6.4/dfs/name --  namenode必备
+    mkdir /usr/hadoop-2.6.4/tmp -- 临时文件目录
     *注意* 此处用su超管的时候需要给dfs及其下的文件赋权给用户，要不然会出现启动集群报权限错误
-    "ExitCodeException exitCode=1: chmod: 更改"/usr/hadoop-2.6.5/dfs/data" 的权限: 不允许的操作"
+    "ExitCodeException exitCode=1: chmod: 更改"/usr/hadoop-2.6.4/dfs/data" 的权限: 不允许的操作"
 
 
 - 6)配置yarn-env.sh 和 hadoop-env.sh
@@ -85,7 +85,7 @@ tags:
     </property>
     <property>
     	<name>hadoop.tmp.dir</name>
-    	<value>/usr/hadoop-2.6.5/tmp</value> -- 此处创建目录见第五步
+    	<value>/usr/hadoop-2.6.4/tmp</value> -- 此处创建目录见第五步
     </property>
     <property>
     	<name>hadoop.proxyuser.zcy.hosts</name>   -- 设置用户代理组
@@ -102,11 +102,11 @@ tags:
     </property>
     <property>
     	<name>dfs.namenode.name.dir</name>
-    	<value>file:/usr/hadoop-2.6.5/dfs/name</value> -- namenode存储元数据信息
+    	<value>file:/usr/hadoop-2.6.4/dfs/name</value> -- namenode存储元数据信息
     </property>
     <property>
     	<name>dfs.datanode.data.dir</name>
-    	<value>file:/usr/hadoop-2.6.5/dfs/data</value> -- datanode存储数据
+    	<value>file:/usr/hadoop-2.6.4/dfs/data</value> -- datanode存储数据
     </property>
 - 9)mapred-site.xml配置 
     cp mapred-site.xml.template mapred-site.xml
@@ -133,13 +133,13 @@ tags:
     slave2
 
 - 12)复制到其他节点 
-    sudo scp -r /usr/hadoop-2.6.5/ slave1:/usr/
-    sudo scp -r /usr/hadoop-2.6.5/ slave2:/usr/
+    sudo scp -r /usr/hadoop-2.6.4/ slave1:/usr/
+    sudo scp -r /usr/hadoop-2.6.4/ slave2:/usr/
 
-然后在各个子节点运行 sudo chown zcy:zcy /usr/hadoop-2.6.5/ -R 更改权限
+然后在各个子节点运行 sudo chown zcy:zcy /usr/hadoop-2.6.4/ -R 更改权限
 - 13)格式化namenode 
 
-    /usr/hadoop-2.6.5/bin/hdfs namenode -format
+    /usr/hadoop-2.6.4/bin/hdfs namenode -format
  
 - 14)启动集群完工 
 

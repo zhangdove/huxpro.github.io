@@ -8,8 +8,8 @@ header-img: "img/avatar-hux-home.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - 简介
-    - blog
+    - hue
+    - install
 ---
 
 # 1.使用如下命令安装
