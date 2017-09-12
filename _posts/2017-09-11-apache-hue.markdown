@@ -57,11 +57,11 @@ tags:
 	</property>
 
 # 5.下载
-git clone https://github.com/cloudera/hue.git
-cd hue
-chmod 777 /disk/hue/hue-3.9.0/desktop/desktop.db
-make apps
-build/env/bin/hue runserver 0.0.0.0:8000
+	git clone https://github.com/cloudera/hue.git
+	cd hue
+	chmod 777 /disk/hue/hue-3.9.0/desktop/desktop.db
+	make apps
+	build/env/bin/hue runserver 0.0.0.0:8000
 
 # 6.hue.ini 配置如下  (这里只配置了hive的)
 	http_host=192.168.139.128
