@@ -35,44 +35,45 @@ tags:
 
 - 1)官网下载 hadoop-2.6.5.tar.gz包 下载地址
 
-> 	http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/
+    http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/
 
 
 - 2)将hadoop解压到/usr目录下
 
-> 	sudo tar -zxvf hadoop-2.6.5.tar.gz -C /usr  
+
+    sudo tar -zxvf hadoop-2.6.5.tar.gz -C /usr
 
 - 3)配置环境变量
-> 	sudo nano /etc/profile
-> 	配置环境变量，将hadoop目录指定
-> 	export HADOOP_HOME=/usr/hadoop-2.6.5
-> 	export PATH=$PATH:$HADOOP_HOME/bin
-> 	export PATH=$PATH:$HADOOP_HOME/sbin -- 启动集群的start-all.sh命令，将其配置到环境中(个人习惯)
-> 	source /etc/profile
+    sudo nano /etc/profile
+    配置环境变量，将hadoop目录指定
+    export HADOOP_HOME=/usr/hadoop-2.6.5
+    export PATH=$PATH:$HADOOP_HOME/bin
+    export PATH=$PATH:$HADOOP_HOME/sbin -- 启动集群的start-all.sh命令，将其配置到环境中(个人习惯)
+    source /etc/profile
 
 - 4)关闭防火墙
-> 	service iptables stop
-> 	service iptables status
-> 	关闭防火墙的自动运行
-> 	chkconfig iptables off
-> 	chkconfig --list | grep iptables
-> 	$>vi /etc/selinux/config
-> 	SELINUX=disabled
+    service iptables stop
+    service iptables status
+    关闭防火墙的自动运行
+    chkconfig iptables off
+    chkconfig --list | grep iptables
+    $>vi /etc/selinux/config
+    SELINUX=disabled
 
 - 5)创建数据存储目录和临时文件目录
-> 	mkdir /usr/hadoop-2.6.5/dfs
-> 	mkdir /usr/hadoop-2.6.5/dfs/data -- datanode必备
-> 	mkdir /usr/hadoop-2.6.5/dfs/name --  namenode必备
-> 	mkdir /usr/hadoop-2.6.5/tmp -- 临时文件目录
-> 	*注意* 此处用su超管的时候需要给dfs及其下的文件赋权给用户，要不然会出现启动集群报权限错误
-> 	"ExitCodeException exitCode=1: chmod: 更改"/usr/hadoop-2.6.5/dfs/data" 的权限: 不允许的操作"
+    mkdir /usr/hadoop-2.6.5/dfs
+    mkdir /usr/hadoop-2.6.5/dfs/data -- datanode必备
+    mkdir /usr/hadoop-2.6.5/dfs/name --  namenode必备
+    mkdir /usr/hadoop-2.6.5/tmp -- 临时文件目录
+    *注意* 此处用su超管的时候需要给dfs及其下的文件赋权给用户，要不然会出现启动集群报权限错误
+    "ExitCodeException exitCode=1: chmod: 更改"/usr/hadoop-2.6.5/dfs/data" 的权限: 不允许的操作"
 
 
 - 6)配置yarn-env.sh 和 hadoop-env.sh
 
 将 yarn-env.sh 和 hadoop-env.sh 配置下的jdk指定目录 ，否则报  "Error: JAVA_HOME is not set and could not be found." 
 >	export JAVA_HOME=/usr/java/jdk1.7.0_67
-# 7)core-site.xml配置文件 #
+- 7)core-site.xml配置文件
     <property>
     	<name>dfs.namenode.secondary.http-address</name>
     	<value>master:9001</value>
@@ -94,7 +95,7 @@ tags:
     	<name>hadoop.proxyuser.zcy.groups</name>-- 设置用户组代理
     	<value>*</value>
     </property>
-# 8)hdfs-site.xml配置文件 #
+- 8)hdfs-site.xml配置文件 
     <property>
     	<name>dfs.replication</name> --因为只有两个节点slave1和slave2，所以副本配置为2
     	<value>2</value>
@@ -107,13 +108,13 @@ tags:
     	<name>dfs.datanode.data.dir</name>
     	<value>file:/usr/hadoop-2.6.5/dfs/data</value> -- datanode存储数据
     </property>
-# 9)mapred-site.xml配置 #
+- 9)mapred-site.xml配置 
     cp mapred-site.xml.template mapred-site.xml
     <property>
     	<name>mapreduce.framework.name</name> --指定是使用yarn运行mapreduce程序。
     	<value>yarn</value>
     </property>
-# 10)yarn-site.xml #
+- 10)yarn-site.xml 
     <property>
     	<name>yarn.nodemanager.aux-services</name> <!-- NodeManager上运行的附属服务。需配置成mapreduce_shuffle，才可运行MapReduce程序-->
     	<value>mapreduce_shuffle</value>
@@ -127,20 +128,20 @@ tags:
     	<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name> <!--YARN集群有多个节点必配 -->
     	<value>org.apache.hadoop.mapred.ShuffleHandler</value>
     </property>
-# 11)slaves 配置(多少节点就写多少节点机器) #
+- 11)slaves 配置(多少节点就写多少节点机器)
     slave1
     slave2
 
-# 12)复制到其他节点 #
+- 12)复制到其他节点 
     sudo scp -r /usr/hadoop-2.6.5/ slave1:/usr/
     sudo scp -r /usr/hadoop-2.6.5/ slave2:/usr/
 
 然后在各个子节点运行 sudo chown zcy:zcy /usr/hadoop-2.6.5/ -R 更改权限
-# 13)格式化namenode #
+- 13)格式化namenode 
 
     /usr/hadoop-2.6.5/bin/hdfs namenode -format
  
-# 14)启动集群完工 #
+- 14)启动集群完工 
 
     start-all.sh
 

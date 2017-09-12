@@ -8,9 +8,9 @@ header-img: "img/avatar-hux-home.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - hue
+    - 简介
+    - blog
 ---
-
 
 # 1.使用如下命令安装
 	sudo yum install gcc
