@@ -5,29 +5,29 @@ description: "Hey, this is dove."
 header-img: "img/about-bg.jpg"
 ---
 
-<!-- Language Selector 
+<!-- Language Selector -->
 <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
+    <option value="0" selected> message </option>
+    <option value="1"> photo </option>
 </select>
--->
+
 <!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
+<div class="message post-container">
+    {% capture about_message %}{% include about/message.md %}{% endcapture %}
+    {{ about_message | markdownify }}
 </div>
 
-<!-- English Version
-<div class="en post-container">
-    {% capture about_en %}{% include about/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
+<!-- English Version -->
+<div class="photo post-container">
+    {% capture about_photo %}{% include about/photo.md %}{% endcapture %}
+    {{ about_photo | markdownify }}
 </div>
--->
-<!-- Handle Language Change
+
+<!-- Handle Language Change -->
 <script type="text/javascript">
     // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
+    var $message = document.querySelector(".message");
+    var $photo = document.querySelector(".photo");
     var $select = document.querySelector("select");
 
     // bind hashchange event
@@ -36,33 +36,33 @@ header-img: "img/about-bg.jpg"
     // handle render
     function _render(){
         var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
+        // photo
+        if(_hash == "#photo"){
             $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
+            $photo.style.display = "block";
+            $message.style.display = "none";
+        // message by default
         }else{
             // not trigger onChange, otherwise cause a loop call.
             $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
+            $message.style.display = "block";
+            $photo.style.display = "none";
         }
     }
 
     // handle select change
     function onLanChange(index){
         if(index == 0){
-            window.location.hash = "#zh"
+            window.location.hash = "#message"
         }else{
-            window.location.hash = "#en"
+            window.location.hash = "#photo"
         }
     }
 
     // init
     _render();
 </script>
- -->
+
 
 {% if site.disqus_username %}
 <!-- disqus 评论框 start -->
