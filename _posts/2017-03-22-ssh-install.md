@@ -1,14 +1,14 @@
 ---
 layout:     post
-title:      "ssh免密登录(CentOs7)"	
-subtitle:   "ssh"			
+title:      "ssh安装"	
+subtitle:   "ssh install"			
 date:       2017-3-22 17:26
 author:     "dove"
 header-img: "img/_posts/ssh.jpg"  
 header-mask: 0.3
 catalog:    true
 tags:
-    - ssh
+    - hue
 	- install
 ---
 
