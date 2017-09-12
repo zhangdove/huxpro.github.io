@@ -12,7 +12,7 @@ tags:
 ---
 
 
-# 1.很荣幸在:使用如下命令安装
+# 1.使用如下命令安装
 	sudo yum install gcc
 	sudo yum install gcc-c++
 	sudo yum install libxml2-devel
